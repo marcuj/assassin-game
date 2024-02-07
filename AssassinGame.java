@@ -61,7 +61,7 @@ public class AssassinGame {
 	    	response = inp.next();	
 	    }	  
     	if (response.equalsIgnoreCase("yes")) {
-	    	System.out.print("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");  // Sort of clears console when restarting game             
+	    	System.out.print("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");  // clears terminal when restarting game             
 	    	new AssassinGame(file);
 	    } else if (response.equalsIgnoreCase("no")) {
 	    	inp.close();		    
@@ -97,7 +97,7 @@ public class AssassinGame {
 				
 				double num = Math.random();
 				double num2 = Math.random();
-				if (num < 0.25 && num2 > 0.75) { // Chance for alternate sayings for fun
+				if (num < 0.25 && num2 > 0.75) { // Chance for alternate sayings
 					System.out.println(old+" was murdered by "+cur+".\n");
 				} else if (num < 0.5 && num2 > 0.5) {
 					System.out.println(old+" slaughtered "+cur+".\n");
@@ -116,7 +116,7 @@ public class AssassinGame {
 		System.out.println(name.substring(0, 1).toUpperCase() + name.substring(1)+" is not in the ring.\n");
 	}
 	
-	// Prints alive people, quite long b/c I wanted the grammar to make sense
+	// Prints alive people
 	public void printRing() {
 		Iterator<String> itr = ring.iterator();
 		if (ring.size() == 0) {
